@@ -6,7 +6,11 @@ module.exports = {
         "./client/index.html",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: "#7461ab",
+            },
+        },
     },
     plugins: [],
 };
