@@ -13,9 +13,11 @@ export default function Button({children, variant = "primary", size = "md", onCl
         lg: "px-6 py-3 text-lg",
     };
 
+    const className = `${variantClasses[variant]} ${sizeClasses[size]}`;
+
     return(
         <>
-            <button>{children}</button>
+            <button className={className} onClick={onClick}>{children}</button>
         </>
     );
 }
