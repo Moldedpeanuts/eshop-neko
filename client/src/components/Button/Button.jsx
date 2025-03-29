@@ -3,7 +3,7 @@ export default function Button({children, variant = "primary", size = "md", onCl
         primary: "bg-primary text-white hover:bg-secondary",
         secondary: "bg-secondary text-white",
         outline: "border border-primary text-primary",
-        ghost: "text-gray-500 border border-gray-500",
+        ghost: "text-gray-500 border border-gray-500 hover:border-gray-500",
         danger: "bg-danger text-white",
     };
 
