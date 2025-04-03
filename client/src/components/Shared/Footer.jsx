@@ -2,7 +2,7 @@ import React, { useState } from 'react';
  
 export default function Footer() {
     return (
-        <footer className="bg-gray-800 p-6">
+        <footer className="bg-primary p-6">
             <div className="container mx-auto text-center">
                 <div className="mb-6">
                     <h3 className="text-2xl mb-4">
