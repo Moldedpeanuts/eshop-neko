@@ -13,7 +13,7 @@ export default function Footer() {
                             type="email" 
                             placeholder="Enter Your Email"
                             className="px-4 py-2 w-full sm:w-auto border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        ></input>
+                        />
                     </form>
                 </div>
             </div>
