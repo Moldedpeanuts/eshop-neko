@@ -1,4 +1,4 @@
-export default function Button({children, variant, size, onClick}) {
+export default function Button({children, variant = "primary", size = "md", onClick}) {
     const variantClasses = {
         primary: "bg-primary text-white hover:bg-secondary",
         secondary: "bg-secondary text-white hover:bg-secondary",
