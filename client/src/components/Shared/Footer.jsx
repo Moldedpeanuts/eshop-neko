@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../Button/Button.jsx';
  
 export default function Footer() {
     return (
@@ -14,6 +15,7 @@ export default function Footer() {
                             placeholder="Enter Your Email"
                             className="px-4 py-2 w-full sm:w-auto border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
+                        <Button>test</Button>
                     </form>
                 </div>
             </div>
