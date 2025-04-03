@@ -1,7 +1,9 @@
-export default function Input(children, type = "text", placeholder, name, value, onChange  ) {
+import Button from '../Button/Button.jsx';
+
+export default function Input(type = "text", placeholder, name, value, onSubmit  ) {
     return(
         <>
-            <input>{children}</input>
+            <input/><Button size="lg">test</Button>
         </>
     );
 }
