@@ -1,21 +1,13 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button.jsx';
  
-export default function Footer(value, onSubmit, onChange) {
+export default function Footer() {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     const [email, setEmail] = useState('');
-    const [isValidEmail, setIsValidEmail] = useState(true);
 
     const handleChange = (e) => {
-        const email = e.target.value;
-        setEmail(email);
-
-        if(regex.test(email)) {
-            setIsValidEmail(true);
-        } else {
-            setIsValidEmail(false);
-        }
+        setEmail(e.target.value);
     };
 
     const handleSubmit = (e) => {
@@ -33,11 +25,10 @@ export default function Footer(value, onSubmit, onChange) {
                             type="email" 
                             placeholder="Enter Your Email"
                             className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-secondary"
-                            onChange = {handleChange}
+                            onChange={handleChange}
                             required
                             value={email}
                         />
-                        { isValidEmail ? null : <p style={{color: 'red'}}>Please enter a valid email</p> }
                         <Button variant="outline" type="submit">Subscribe</Button>
                     </form>
                 </div>
