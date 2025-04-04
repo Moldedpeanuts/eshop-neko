@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button.jsx';
  
-export default function Footer() {
+export default function Footer(value, onChange) {
+    const regex = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
+
+
+
+
     return (
         <footer className="w-full bg-primary p-6">
                 <div className="w-full px-4">
