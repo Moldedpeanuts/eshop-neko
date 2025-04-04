@@ -37,7 +37,7 @@ export default function Footer() {
                         {/* Useful Links Column */}
                         <div className="flex-1 min-w-[200px]">
                             <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
-                            <ul>
+                            <ul className="flex flex-col items-center">
                                 <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
                                 <li><a href="#" className="text-gray-400 hover:text-white">Shop</a></li>
                                 <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
@@ -48,7 +48,7 @@ export default function Footer() {
                         {/* Customer Service Column */}
                         <div className="flex-1 min-w-[200px]">
                             <h3 className="text-lg font-semibold mb-4">Customer Service</h3>
-                            <ul>
+                            <ul className="flex flex-col items-center">
                                 <li><a href="#" className="text-gray-400 hover:text-white">FAQ</a></li>
                                 <li><a href="#" className="text-gray-400 hover:text-white">Shipping Info</a></li>
                                 <li><a href="#" className="text-gray-400 hover:text-white">Returns</a></li>
@@ -59,7 +59,7 @@ export default function Footer() {
                         {/* Follow Us Column */}
                         <div className="flex-1 min-w-[200px]">
                             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-                            <ul>
+                            <ul className="flex flex-col items-center">
                                 <li><a href="#" className="text-gray-400 hover:text-white">Facebook</a></li>
                                 <li><a href="#" className="text-gray-400 hover:text-white">Twitter</a></li>
                                 <li><a href="#" className="text-gray-400 hover:text-white">Instagram</a></li>
@@ -68,10 +68,10 @@ export default function Footer() {
 
                             <div className="text-center mt-8">
                                 <p className="text-gray-400 text-sm">© 2025 Neko All rights reserved.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </footer>
     );
 }
