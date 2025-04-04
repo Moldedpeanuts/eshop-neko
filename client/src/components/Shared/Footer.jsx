@@ -16,7 +16,7 @@ export default function Footer() {
 
     return (
         <footer className="w-full p-6">
-                <div className="bg-primary w-full px-4">
+                <div className="bg-primary w-full px-4 py-12">
                     <h3 className="text-3xl text-white mb-4 text-center">
                         Subscribe to our Newsletter
                     </h3>
