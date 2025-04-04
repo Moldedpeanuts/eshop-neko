@@ -38,7 +38,7 @@ export default function Footer(value, onSubmit, onChange) {
                             value={email}
                         />
                         { isValidEmail ? null : <p style={{color: 'red'}}>Please enter a valid email</p> }
-                        <Button variant="outline">Subscribe</Button>
+                        <Button variant="outline" type="submit">Subscribe</Button>
                     </form>
                 </div>
         </footer>
