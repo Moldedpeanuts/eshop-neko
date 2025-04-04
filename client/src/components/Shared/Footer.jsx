@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button.jsx';
  
-export default function Footer(value, onChange) {
+export default function Footer(value, onSubmit) {
     const regex = '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$';
 
+    const [email, setEmail] = useState('');
 
-
+    
 
     return (
         <footer className="w-full bg-primary p-6">
