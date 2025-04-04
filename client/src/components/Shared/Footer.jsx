@@ -32,41 +32,46 @@ export default function Footer() {
                         <Button variant="outline" type="submit">Subscribe</Button>
                     </form>
                 </div>
-                <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <div>
-                            <h3 class="text-lg font-semibold mb-4">Useful Links</h3>
+                <div className="container mx-auto px-6 py-12">
+                    <div className="flex flex-wrap justify-between gap-6">
+                        {/* Useful Links Column */}
+                        <div className="flex-1 min-w-[200px]">
+                            <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
                             <ul>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Shop</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Shop</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
                             </ul>
                         </div>
-                        <div>
-                            <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
+                        
+                        {/* Customer Service Column */}
+                        <div className="flex-1 min-w-[200px]">
+                            <h3 className="text-lg font-semibold mb-4">Customer Service</h3>
                             <ul>
-                            <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Shipping Info</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Returns</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">FAQ</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Shipping Info</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Returns</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a></li>
                             </ul>
                         </div>
-                        <div>
-                            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                        
+                        {/* Follow Us Column */}
+                        <div className="flex-1 min-w-[200px]">
+                            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
                             <ul>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Facebook</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">Instagram</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white">YouTube</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Facebook</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Twitter</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">Instagram</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-white">YouTube</a></li>
                             </ul>
 
-                            <div class="text-center mt-8">
-                                <p class="text-gray-400 text-sm">© 2025 Neko All rights reserved.</p>
-                            </div>
+                            <div className="text-center mt-8">
+                                <p className="text-gray-400 text-sm">© 2025 Neko All rights reserved.</p>
                         </div>
                     </div>
                 </div>
+            </div>
         </footer>
     );
 }
