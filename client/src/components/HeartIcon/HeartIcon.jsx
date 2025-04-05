@@ -1,5 +1,4 @@
-import { CiHeart } from "react-icons/ci"; // empty heart icon
-import { FaHeart } from "react-icons/fa"; // full heart icon
+import { FaRegHeart } from "react-icons/fa";
 import { useState } from 'react'
 
 export default function HeartIcon() {
@@ -10,8 +9,8 @@ export default function HeartIcon() {
     }
 
     return(
-        <div onClick={toggleHeart}>
-            {heart ? <FaHeart></FaHeart> : <CiHeart></CiHeart>}
+        <div onClick={toggleHeart} className="hover:cursor-pointer">
+            {heart ? <FaRegHeart className="text-purple-600 fill-current"></FaRegHeart> : <FaRegHeart></FaRegHeart>}
         </div>
     );
 }
