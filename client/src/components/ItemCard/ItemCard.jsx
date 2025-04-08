@@ -10,7 +10,7 @@ export default function ItemCard({imgSource, title, price}) {
                     <h3 className="font-semibold text-sm">Item Title</h3>
                     <HeartIcon></HeartIcon>
                 </div>
-                <p className="font-extrabold text-left pt-4">7,99$</p>
+                <p className="font-extrabold text-left pt-4 pb-3">7,99$</p>
                 <Button>Add to Cart</Button>
             </div>
         </>
