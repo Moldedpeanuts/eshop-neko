@@ -4,7 +4,7 @@ import { BsCart3 } from 'react-icons/bs'; // cart icon
 export default function ItemCard() {
     return(
         <>
-            <div className="card-container border-2 border-indigo-400 h-96 w-64">
+            <div className="card-container h-96 w-64 bg-white">
                 dasdad
             </div>
         </>
