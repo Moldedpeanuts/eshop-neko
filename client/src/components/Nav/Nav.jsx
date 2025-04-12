@@ -23,17 +23,14 @@ export default function Nav() {
                     </div>
 
                     {/* Profile, Favorites and Cart section */}
-                    <div className="flex justify-end space-x-6">
+                    <div className="flex justify-end space-x-6 gap-3">
                         <a href="#"><FaRegUser></FaRegUser></a>
                         <a href="#"><FaRegHeart></FaRegHeart></a>
                         <a href="#"><BsCart3></BsCart3></a>
                     </div>
                 </div>
             </div>
-
-            <div className="border-t border-secondary my-4"></div>
-
-            <div className="bg-primary py-4">
+            <div className="bg-secondary py-4">
                 Categories
             </div>
         </>
