@@ -38,10 +38,10 @@ export default function Footer() {
                         <div className="flex-1 min-w-[200px]">
                             <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
                             <ul className="flex flex-col items-center">
-                                <li><a href="#" className="text-gray-400 hover:text-white">Home</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">Shop</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Home</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Shop</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">About Us</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Contact</a></li>
                             </ul>
                         </div>
                         
@@ -49,10 +49,10 @@ export default function Footer() {
                         <div className="flex-1 min-w-[200px]">
                             <h3 className="text-lg font-semibold mb-4">Customer Service</h3>
                             <ul className="flex flex-col items-center">
-                                <li><a href="#" className="text-gray-400 hover:text-white">FAQ</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">Shipping Info</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">Returns</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">FAQ</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Shipping Info</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Returns</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Privacy Policy</a></li>
                             </ul>
                         </div>
                         
@@ -60,10 +60,10 @@ export default function Footer() {
                         <div className="flex-1 min-w-[200px]">
                             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
                             <ul className="flex flex-col items-center">
-                                <li><a href="#" className="text-gray-400 hover:text-white">Facebook</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">Twitter</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">Instagram</a></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white">YouTube</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Facebook</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Twitter</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">Instagram</a></li>
+                                <li><a href="#" className="text-gray-400 hover:text-primary">YouTube</a></li>
                             </ul>
 
                             <div className="text-center mt-8">
