@@ -65,11 +65,11 @@ export default function Footer() {
                                 <li><a href="#" className="text-gray-400 hover:text-primary">Instagram</a></li>
                                 <li><a href="#" className="text-gray-400 hover:text-primary">YouTube</a></li>
                             </ul>
-
-                            <div className="text-center mt-8">
-                                <p className="text-gray-400 text-sm">© 2025 Neko All rights reserved.</p>
-                            </div>
                         </div>
+                    </div>
+                    {/* Acknowledgements */}
+                    <div className="flex justify-start text-center mt-8">
+                        <p className="text-gray-400 text-sm">© 2025 Neko All rights reserved.</p>
                     </div>
                 </div>
         </footer>
