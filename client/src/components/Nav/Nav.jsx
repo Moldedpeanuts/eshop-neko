@@ -3,6 +3,8 @@ import { CiSearch } from "react-icons/ci"; // search icon
 import { FaRegUser } from "react-icons/fa6"; // user icon
 import { FaRegHeart } from "react-icons/fa"; // heart icon
 import { FaCat } from "react-icons/fa"; // cat logo
+import { FaBars } from 'react-icons/fa'; // menu icon
+
 
 export default function Nav() {
     return(
@@ -31,8 +33,8 @@ export default function Nav() {
                     </div>
                 </div>
             </div>
-            <div className="bg-secondary py-4">
-                Categories
+            <div className="flex justify-start gap-2 px-4 bg-secondary py-4 font-bold">
+               <FaBars className="text-2xl cursor-pointer"></FaBars><h2 className="cursor-pointer">Categories</h2>
             </div>
         </>
     );
