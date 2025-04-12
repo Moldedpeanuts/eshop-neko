@@ -15,7 +15,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className="w-full">
+        <footer className="absolute left-0 bottom-0 right-0">
                 <div className="bg-primary w-full px-4 py-12">
                     <h3 className="text-3xl text-white mb-4 text-center">
                         Subscribe to our Newsletter
