@@ -24,7 +24,9 @@ export default function ItemCard({imgSource, title, price}) {
                 <p className="font-extrabold text-left pt-4 pb-3">{price}</p>
                 <Button>Add to Cart</Button>
             </div>
-            {isFavoriteModalOpen && <AddedToFavorites></AddedToFavorites>}
+            <div className="flex justify-end">
+                {isFavoriteModalOpen && <AddedToFavorites></AddedToFavorites>}
+            </div>
         </>
     );
 }
