@@ -1,11 +1,13 @@
 import { FaRegHeart } from "react-icons/fa";
 import { useState } from 'react'
 
-export default function HeartIcon() {
+export default function HeartIcon({onClick}) {
     const [heart, setHeart] = useState(false);
 
     const toggleHeart = () => {
         setHeart(!heart);
+
+        if(onClick) onClick();
     }
 
     return(
