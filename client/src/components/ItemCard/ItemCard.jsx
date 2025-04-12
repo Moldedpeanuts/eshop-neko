@@ -21,7 +21,7 @@ export default function ItemCard({imgSource, title, price}) {
                     <h3 className="font-semibold text-sm">{title}</h3>
                     <HeartIcon onClick={handleClick}></HeartIcon>
                 </div>
-                <p className="font-extrabold text-left pt-4 pb-3">7,99$</p>
+                <p className="font-extrabold text-left pt-4 pb-3">{price}</p>
                 <Button>Add to Cart</Button>
             </div>
             { isFavoriteModalOpen && <AddedToFavorites></AddedToFavorites>}
