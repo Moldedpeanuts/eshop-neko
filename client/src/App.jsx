@@ -10,11 +10,12 @@ import { CiSearch } from "react-icons/ci"; // search icon
 import { FaPhoneAlt } from "react-icons/fa"; // phone icon
 import { FaRegUser } from "react-icons/fa6"; // user icon
 import ItemCard from './components/ItemCard/ItemCard.jsx'
+import Header from './components/Shared/Header.jsx'
 
 export default function App() {
   return (
     <>
-      <ItemCard></ItemCard>
+      <Header></Header>
     </>
   );
 }
