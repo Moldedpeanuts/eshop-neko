@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <Header></Header>
-      <Carousel></Carousel>
+        <Carousel></Carousel>
       <AdBanner></AdBanner>
       <Footer></Footer>
     </>
