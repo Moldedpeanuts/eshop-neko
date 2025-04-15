@@ -4,7 +4,7 @@ export default function AdBanner1() {
             {/* Background Image */}
             <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{
             backgroundImage:
-                "url('https://img.freepik.com/free-vector/anime-banner-template_23-2147904637.jpg')",
+                "url('./src/assets/banner1.svg')",
             }}></div>
             
             {/* Content */}

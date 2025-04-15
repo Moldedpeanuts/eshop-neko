@@ -68,8 +68,9 @@ export default function Footer() {
                         </div>
                     </div>
                     {/* Acknowledgements */}
-                    <div className="flex justify-start text-center mt-8">
+                    <div className="flex justify-evenly text-center mt-8 gap-6">
                         <p className="text-gray-400 text-sm">© 2025 Neko All rights reserved.</p>
+                        <p className="text-gray-400 text-sm">Designed & Developed by <a href="https://github.com/Moldedpeanuts" className="underline text-gray-400">Moldedpeanuts</a></p>
                     </div>
                 </div>
         </footer>
