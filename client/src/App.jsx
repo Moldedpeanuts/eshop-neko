@@ -9,6 +9,7 @@ import Header from './components/Shared/Header.jsx'
 import AdBanner1 from './components/AdBanners/AdBanner1.jsx'
 import AdBanner2 from './components/AdBanners/AdBanner2.jsx'
 import Carousel from './components/Carousel/Carousel.jsx'
+import NewProducts from './components/NewProducts/NewProducts.jsx'
 
 export default function App() {
   return (
