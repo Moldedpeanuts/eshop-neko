@@ -22,11 +22,6 @@ export default function AdBanner1() {
                 Shop Now
             </a>
             </div>
-    
-            {/* Optional extra visual elements */}
-            <div className="absolute bottom-0 right-0 p-4 text-xl text-white opacity-60">
-            <span>Limited Edition - Only Available While Stocks Last!</span>
-            </div>
       </div>
     );
 }
