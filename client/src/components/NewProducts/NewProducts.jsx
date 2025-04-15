@@ -3,9 +3,9 @@ import ItemCard from '../ItemCard/ItemCard'
 export default function NewProducts() {
     return(
         <div className="w-full">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-6 mt-20">
                 {/* Section Title */}
-                <h2 className="text-4xl font-bold text-center mb-12">New Products</h2>
+                <h2 className="text-4xl font-bold text-left mb-12">New Products</h2>
                 
                 {/* Product Cards */}
                 <div className="flex flex-wrap justify-center gap-6">
