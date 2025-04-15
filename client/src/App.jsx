@@ -15,10 +15,13 @@ export default function App() {
   return (
     <>
       <Header></Header>
-      <div className="mb-6">
+      <div className="mb-8">
         <Carousel></Carousel>
       </div>
       <AdBanner1></AdBanner1>
+      <div className="mb-8">
+        <NewProducts></NewProducts>
+      </div>
       <div className="mt-32 mb-32">
         <AdBanner2></AdBanner2>
       </div>
