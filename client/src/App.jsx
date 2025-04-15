@@ -14,7 +14,7 @@ export default function App() {
   return (
     <>
       <Header></Header>
-      <div className="mb-8">
+      <div className="mb-6">
         <Carousel></Carousel>
       </div>
       <AdBanner1></AdBanner1>
