@@ -1,6 +1,6 @@
 export default function AdBanner1() {
     return(
-        <div className="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white p-12 flex flex-col items-center justify-center relative overflow-hidden">
+        <div className="w-full bg-primary text-white p-12 flex flex-col items-center justify-center relative overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{
             backgroundImage:
