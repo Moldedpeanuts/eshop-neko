@@ -10,9 +10,9 @@ export default function Carousel() {
         <Swiper 
             modules={[Navigation, Autoplay]}
             navigation
-            autoplay={{delay: 3000}}
+            autoplay={{delay: 4000}}
             loop={true}
-            className="swiper h-96"
+            className="swiper h-[600px]"
         >
             <SwiperSlide>
                 <img src='https://cloudcitygames.com/wp-content/uploads/Content/Product-Banners/funko-pop-banner.png' alt='first slide' className='w-full h-full object-cover'/>
