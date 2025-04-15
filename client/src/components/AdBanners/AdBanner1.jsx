@@ -1,12 +1,6 @@
 export default function AdBanner1() {
     return(
         <div className="w-full bg-primary text-white p-12 flex flex-col items-center justify-center relative overflow-hidden">
-            {/* Background Image */}
-            <div className="absolute inset-0 bg-cover bg-center opacity-50" style={{
-            backgroundImage:
-                "url('./src/assets/banner1.svg')",
-            }}></div>
-            
             {/* Content */}
             <div className="relative z-10 text-center">
             <h2 className="text-4xl font-bold mb-4">
