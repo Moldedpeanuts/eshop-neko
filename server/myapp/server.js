@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.set('strictQuery', false); // set before connecting to mongodb to prevent filtering out queries
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.get('/', (req, res) => {
     res.send('Homepage');
