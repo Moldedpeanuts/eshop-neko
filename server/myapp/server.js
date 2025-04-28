@@ -1,8 +1,6 @@
 require('dotenv').config();
 const port = process.env.PORT;
 
-console.log(`Server is running to ${port}`);
-
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false); // set before connecting to mongodb to prevent filtering out queries
 
