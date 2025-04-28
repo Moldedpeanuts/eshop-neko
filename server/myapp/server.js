@@ -1,11 +1,10 @@
 require('dotenv').config();
 const port = process.env.PORT;
 
-console.log(`Server is running on port: ${port}`);
+console.log(`Server is running to ${port}`);
 
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false); // set before connecting to mongodb to prevent filtering out queries
-connectToMongo(); // before starting server attempt to connect to database
 
 const express = require('express');
 const app = express();
@@ -17,6 +16,9 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.send('<h1>About</h1>');
 });
+
+connectToMongo(); // before starting server attempt to connect to database
+
 
 app.listen(port, () => {
     console.log(`App listening to ${port}`);
