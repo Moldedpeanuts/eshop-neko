@@ -12,6 +12,8 @@ app.get('/about', (req, res) => {
     res.send('<h1>About</h1>');
 });
 
+connectToMongo(); // before starting server attempt to connect to database
+
 app.listen(port, () => {
     console.log(`App listening to ${port}`);
 }); 
