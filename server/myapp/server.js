@@ -15,3 +15,5 @@ app.get('/about', (req, res) => {
 app.listen(port, () => {
     console.log(`App listening to ${port}`);
 }); 
+
+mongoose.connect(process.env.MONGO_URI);
