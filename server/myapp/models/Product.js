@@ -10,3 +10,5 @@ const productSchema = new Schema({
   stockQuantity: Number,
   createdDate: Date,
 });
+
+const Product = mongoose.model('Product', productSchema);
