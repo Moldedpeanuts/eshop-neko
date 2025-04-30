@@ -31,3 +31,7 @@ async function connectToMongo() {
          console.log('MongoDB connection error:', error);
      }
 }
+
+
+const productRoutes = require('./routes/product');
+app.use('/products', productRoutes);
