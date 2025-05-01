@@ -34,5 +34,5 @@ async function connectToMongo() {
 }
 
 
-const productRoutes = require('./routes/products'); // middleware
+const productRoutes = require('./routes/products'); // import router
 app.use('/products', productRoutes);
