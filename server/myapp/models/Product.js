@@ -8,7 +8,7 @@ const productSchema = new Schema({
   description: String,
   category: String,
   stockQuantity: { type: Number, default: 0 },
-  createAt: Date,
+  creation: Date,
 });
 
 const Product = mongoose.model('Product', productSchema);
