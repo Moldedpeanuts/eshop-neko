@@ -20,4 +20,10 @@ async function seedDatabase() {
             creation: faker.date.past(),
         });
     }
+
+    await Product.insertMany(products);
+    console.log('Database seeded with 50 products');
+    mongoose.connection.close();
 }
+
+seedDatabase();
