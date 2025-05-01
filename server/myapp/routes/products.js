@@ -7,6 +7,7 @@ router.get('/', async (req, res) => {
         const products = await Product.find({});
         res.json(products);
     } catch(err) {
+        console.log('Error in GET/products:', err);
         res.status(500).json({ message: 'Something went wrong'});
     }
 });
