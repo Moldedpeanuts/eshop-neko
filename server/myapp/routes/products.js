@@ -31,8 +31,19 @@ router.post('/', async (req, res) => {
         const newItem = await Product.create(request);
         res.status(201).json(newItem);
     } catch {
-        res.status(500).json({ message: 'Something went wrong'});
+        res.status(500).json({ message: 'Something went wrong' });
     }   
+});
+
+router.put('/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const update = req.body;
+        const updatedProduct = await Product.findByIdAndUpdate(id, update, { new: true });
+        res.status(200).json(updatedProduct);
+    } catch {
+        res.status(500).json({ message: 'Something went wrong' });
+    }
 });
 
 module.exports = router;
