@@ -31,8 +31,8 @@ router.post('/', async (req, res) => {
         const newItem = await Product.create(request);
         res.status(201).json(newItem);
     } catch {
-
-    }
+        res.status(500).json({ message: 'Something went wrong'});
+    }   
 });
 
 module.exports = router;
