@@ -23,7 +23,9 @@ async function seedDatabase() {
 
     await Product.insertMany(products);
     console.log('Database seeded with 50 products');
-    mongoose.connection.close();
 }
 
-seedDatabase();
+seedDatabase()
+    .then(() => console.log('Seeding complete'))
+    .catch((err) => console.error('Seeding error:', err))
+    .finally(() => mongoose.connection.close());
