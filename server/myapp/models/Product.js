@@ -2,12 +2,12 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
-  name: String,
-  image: String,
-  price: Number,
+  name: { type: String, required: true },
+  imageUrl: String,
+  price: { type: Number, required: true },
   description: String,
   category: String,
-  stockQuantity: Number,
+  stockQuantity: { type: Number, default: 0 },
   createAt: Date,
 });
 
