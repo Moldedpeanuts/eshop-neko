@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
         const products = await Product.find({});
         res.json(products);
     } catch(err) {
-        res.status(500).json({ message: 'Something went wrong'});
+        res.status(500).json({ message: 'Something went wrong with getting all products'});
     }
 });
 
@@ -21,7 +21,7 @@ router.get('/:id', async (req, res) => {
             res.json(product);
         }
     } catch {
-        res.status(500).json({ message: 'Something went wrong'});
+        res.status(500).json({ message: 'Something went wrong with getting product'});
     }
 });
 
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
         const newItem = await Product.create(request);
         res.status(201).json(newItem);
     } catch {
-        res.status(500).json({ message: 'Something went wrong' });
+        res.status(500).json({ message: 'Something went wrong with creating the product' });
     }   
 });
 
@@ -42,7 +42,7 @@ router.put('/:id', async (req, res) => {
         const updatedProduct = await Product.findByIdAndUpdate(id, update, { new: true });
         res.status(200).json(updatedProduct);
     } catch {
-        res.status(500).json({ message: 'Something went wrong' });
+        res.status(500).json({ message: 'Something went wrong with updating the product' });
     }
 });
 
@@ -56,7 +56,7 @@ router.delete('/:id', async (req, res) => {
             res.status(200).json({ message: 'Item deleted'});
         }
     } catch {
-        res.status(500).json({ message: 'Something went wrong '});
+        res.status(500).json({ message: 'Something went wrong with deleting the item'});
     }
 });
 
