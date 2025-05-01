@@ -8,6 +8,9 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
+const productRoutes = require('./routes/products'); // import router before starting server
+app.use('/products', productRoutes);
+
 app.get('/', (req, res) => {
     res.send('Homepage');
 });
@@ -17,8 +20,6 @@ app.get('/about', (req, res) => {
 });
 
 connectToMongo(); // before starting server attempt to connect to database
-
-
 app.listen(port, () => {
     console.log(`App listening to ${port}`);
 }); 
@@ -32,7 +33,3 @@ async function connectToMongo() {
          console.log('MongoDB connection error:', error);
      }
 }
-
-
-const productRoutes = require('./routes/products'); // import router
-app.use('/products', productRoutes);
