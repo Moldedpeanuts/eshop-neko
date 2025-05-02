@@ -12,5 +12,5 @@ router.post(async (req, res) => {
         });
     }
 
-    const checkItem = cart.items.find((item) => item.product.toString() === productId);
+    const existingItem = cart.items.find((item) => item.product.toString() === productId);
 });
