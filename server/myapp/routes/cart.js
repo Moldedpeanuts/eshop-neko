@@ -13,4 +13,6 @@ router.post(async (req, res) => {
     }
 
     const existingItem = cart.items.find((item) => item.product.toString() === productId);
+
+    existingItem ? cart.items.quantity += quantity : cart.items.push({ product: productId, quantity });
 });
