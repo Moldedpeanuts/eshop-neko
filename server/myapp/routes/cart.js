@@ -7,7 +7,7 @@ router.post(async (req, res) => {
     let cart = await Cart.findOne();
 
     if(!cart) {
-        const cart = await Cart.create({
+        cart = await Cart.create({
             items: [{ product: productId, quantity }],
         });
     }
@@ -15,4 +15,7 @@ router.post(async (req, res) => {
     const existingItem = cart.items.find((item) => item.product.toString() === productId);
 
     existingItem ? cart.items.quantity += quantity : cart.items.push({ product: productId, quantity });
+
+    await cart.save();
+    res.status(200).json(cart);
 });
