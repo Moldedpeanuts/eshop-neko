@@ -22,6 +22,7 @@ router.post(async (req, res) => {
             res.status(200).json(cart);
         } catch(error) {
             console.error('Product was not saved with error:', error);
+            res.status(500).json({ error: 'Failed to save cart'});
         }
     }
 
