@@ -16,6 +16,14 @@ router.post(async (req, res) => {
 
     existingItem ? cart.items.quantity += quantity : cart.items.push({ product: productId, quantity });
 
-    await cart.save();
-    res.status(200).json(cart);
+    async function saveCart() {
+        try {
+            await cart.save();
+            res.status(200).json(cart);
+        } catch(error) {
+            console.error('Product was not saved with error:', error);
+        }
+    }
+
+    saveCart();
 });
