@@ -14,7 +14,7 @@ router.post(async (req, res) => {
 
     const existingItem = cart.items.find((item) => item.product.toString() === productId);
 
-    existingItem ? existringItem.quantity += quantity : cart.items.push({ product: productId, quantity });
+    existingItem ? existingItem.quantity += quantity : cart.items.push({ product: productId, quantity });
 
     async function saveCart() {
         try {
