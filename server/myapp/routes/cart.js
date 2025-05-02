@@ -11,4 +11,6 @@ router.post(async (req, res) => {
             items: [{ product: productId, quantity }],
         });
     }
+
+    cart.items.find((item) => item.product.toString === productId);
 });
