@@ -7,14 +7,15 @@ router.post('/login', async(req, res) => {
     const { email, password } = req.body;
     try {
         const user = await User.findOne({ email });
+        if(!user) return res.status(401).json({ error: 'Invalid email or password'});
+        
         const passMatch = await comparePassword(password, user.password);
         if(passMatch) {
             res.status(200).json({ message: 'Login successful!'});
         } else {
-            res.send.json({ error: 'User was not found'});
+            res.status(401).json({ error: 'Invalid password'});
         }
     } catch(err) {
-        console.error('User not found with error:', err);
         res.status(500).json({ error: 'Internal server error'});
     }
 });
