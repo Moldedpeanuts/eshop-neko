@@ -12,3 +12,5 @@ const sessionMiddleware = session({
         sameSize: 'lax',
     }
 });
+
+module.exports = sessionMiddleware;
