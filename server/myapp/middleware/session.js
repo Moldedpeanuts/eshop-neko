@@ -5,4 +5,7 @@ const sessionMiddleware = session({
     resave: false,
     saveUninitialized: false,
     rolling: true,
+    cookie: {
+        httpOnly: true,
+    }
 });
