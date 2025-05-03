@@ -14,6 +14,9 @@ app.use(session);
 const productRoutes = require('./routes/products'); // import router before starting server
 app.use('/products', productRoutes);
 
+const authRoutes = require('./routes/login');
+app.use(authRoutes);
+
 app.get('/', (req, res) => {
     res.send('Homepage');
 });
