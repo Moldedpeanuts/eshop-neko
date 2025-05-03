@@ -8,6 +8,9 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
+const session = require('./middleware/session');
+app.use(session);
+
 const productRoutes = require('./routes/products'); // import router before starting server
 app.use('/products', productRoutes);
 
