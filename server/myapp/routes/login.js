@@ -8,7 +8,7 @@ router.post('/', async(req, res) => {
     try {
         const user = await User.findOne({ email });
         if(!user){
-            res.status(401).json({ error: 'Invalid email or password'});
+            return res.status(401).json({ error: 'Invalid email or password'});
         }
 
         const passMatch = await comparePassword(password, user.password);
