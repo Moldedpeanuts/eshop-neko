@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Cart = require('../models/Cart');
 
-router.post(async (req, res) => {
+router.post('/', async (req, res) => {
     const { productId, quantity} = req.body;
     let cart = await Cart.findOne();
 
