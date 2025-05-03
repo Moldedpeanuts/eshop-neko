@@ -15,7 +15,7 @@ const productRoutes = require('./routes/products'); // import router before star
 app.use('/products', productRoutes);
 
 const authRoutes = require('./routes/login');
-app.use(authRoutes);
+app.use('/login', authRoutes);
 
 app.get('/', (req, res) => {
     res.send('Homepage');
