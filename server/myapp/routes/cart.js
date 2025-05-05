@@ -5,6 +5,7 @@ const User = require('../models/User');
 
 router.post('/', async (req, res) => {
     const { productId, quantity} = req.body;
+    const userId = req.session.userId;
     let cart = await Cart.findOne();
 
     if(!cart) {
