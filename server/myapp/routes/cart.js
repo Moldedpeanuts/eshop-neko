@@ -44,6 +44,8 @@ router.get('/', async (req, res) => {
             res.status(500).json({ error: 'Cart not found'});
         }
     }
+
+    getCart();
 });
 
 module.exports = router;
