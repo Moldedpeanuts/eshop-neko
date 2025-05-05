@@ -11,6 +11,7 @@ router.post('/', async (req, res) => {
 
     if(!cart) {
         cart = await Cart.create({
+            user: userId,
             items: [{ product: productId, quantity }],
         });
     }
