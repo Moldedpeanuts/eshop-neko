@@ -80,7 +80,18 @@ router.put('/', async (req, res) => {
         }
     }
 
+    async function saveCart() {
+        try {
+            await cart.save();
+            res.status(200).json(cart);
+        } catch(error) {
+            console.error('Product was not saved with error:', error);
+            res.status(500).json({ error: 'Failed to save cart'});
+        }
+    }
+
     modifyCart();
+    saveCart();
 });
 
 module.exports = router;
