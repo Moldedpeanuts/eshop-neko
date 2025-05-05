@@ -57,13 +57,18 @@ router.put('/', async (req, res) => {
             const existingItem = cart.items.find((item) => item.product.toString() === productId);
 
             if(existingItem) {
-                switch (action) {
-                    case 'increase':
+                switch (true) {
+                    case (action === 'increase' && quantity >= 0):
                         existingItem.quantity += quantity;
                         break;
                     
-                    case 'decrease':
+                    case (action === 'decrease'):
                         existingItem.quantity -= quantity;
+                        break;
+                    
+                    case (action === 'decrease' && quantity === 0):
+                        const currentItemIndex = cart.items.findIndex(existingItem);
+                        cart.items.splice(currentItemIndex, 1);
                         break;
                 }
 
