@@ -51,12 +51,12 @@ router.get('/', async (req, res) => {
 router.put('/', async (req, res) => {
     async function modifyCart() {
         try{
+            const { productId, quantity} = req.body;
             const userId = req.session.userId;
             const cart = await Cart.findOne({ user: userId });
             const existingItem = cart.items.find((item) => item.product.toString() === productId);
 
             existingItem ? existingItem.quantity += quantity : cart.items.push({ product: productId, quantity });
-
         } catch {
 
         }
