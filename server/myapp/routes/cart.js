@@ -33,4 +33,8 @@ router.post('/', async (req, res) => {
     saveCart();
 });
 
+router.get('/', async (req, res) => {
+    const userId = req.session.userId;
+});
+
 module.exports = router;
