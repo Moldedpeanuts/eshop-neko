@@ -53,6 +53,10 @@ router.put('/', async (req, res) => {
     const userId = req.session.userId;
     const cart = await Cart.findOne({ user: userId });
 
+    if(!cart) {
+        return res.status(404).json({ error: 'Cart not found' });
+    }
+
     async function modifyCart() {
         async function saveCart() {
             try {
@@ -90,6 +94,7 @@ router.put('/', async (req, res) => {
             }
         } catch(err) {
             console.error({ error: 'Something went wrong', err});
+            res.status(500).json({ error: 'Something went wrong' });
         }
     }
 
