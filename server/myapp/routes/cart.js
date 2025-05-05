@@ -40,7 +40,8 @@ router.get('/', async (req, res) => {
             const cart = await Cart.findOne({ user: userId });
             res.status(200).json({ cart });
         } catch(err) {
-            
+            console.error('Cart not found', err);
+            res.status(500).json({ error: 'Cart not found'});
         }
     }
 });
