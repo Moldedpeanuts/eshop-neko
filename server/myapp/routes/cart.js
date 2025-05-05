@@ -67,7 +67,7 @@ router.put('/', async (req, res) => {
                         break;
                     
                     case (action === 'decrease' && quantity === 0):
-                        const currentItemIndex = cart.items.findIndex(existingItem);
+                        const currentItemIndex = cart.items.findIndex((elem) => elem.product === productId);
                         cart.items.splice(currentItemIndex, 1);
                         break;
                 }
