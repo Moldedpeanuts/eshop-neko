@@ -34,11 +34,14 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
-    try{
-        const userId = req.session.userId;
-        const cart = await Cart.findOne({ user: userId });
-    } catch(err) {
-
+    async function getCart() {
+        try{
+            const userId = req.session.userId;
+            const cart = await Cart.findOne({ user: userId });
+            res.status(200).json({ cart });
+        } catch(err) {
+            
+        }
     }
 });
 
