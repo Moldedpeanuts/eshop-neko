@@ -49,6 +49,10 @@ router.get('/', async (req, res) => {
 });
 
 router.put('/', async (req, res) => {
+    const { productId, quantity, action} = req.body;
+    const userId = req.session.userId;
+    const cart = await Cart.findOne({ user: userId });
+
     async function modifyCart() {
         async function saveCart() {
             try {
@@ -61,9 +65,6 @@ router.put('/', async (req, res) => {
         }
 
         try{
-            const { productId, quantity, action} = req.body;
-            const userId = req.session.userId;
-            const cart = await Cart.findOne({ user: userId });
             const existingItem = cart.items.find((item) => item.product.toString() === productId);
 
             if(existingItem) {
