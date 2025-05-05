@@ -74,6 +74,8 @@ router.put('/', async (req, res) => {
             console.error({ error: 'Something went wrong', err});
         }
     }
+
+    modifyCart();
 });
 
 module.exports = router;
