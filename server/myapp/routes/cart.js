@@ -48,4 +48,15 @@ router.get('/', async (req, res) => {
     getCart();
 });
 
+router.put('/', async (req, res) => {
+    async function modifyCart() {
+        try{
+            const userId = req.session.userId;
+            const cart = await Cart.findOne({ user: userId });
+        } catch {
+
+        }
+    }
+});
+
 module.exports = router;
