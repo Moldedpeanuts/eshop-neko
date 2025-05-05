@@ -50,6 +50,16 @@ router.get('/', async (req, res) => {
 
 router.put('/', async (req, res) => {
     async function modifyCart() {
+        async function saveCart() {
+            try {
+                await cart.save();
+                res.status(200).json(cart);
+            } catch(error) {
+                console.error('Product was not saved with error:', error);
+                res.status(500).json({ error: 'Failed to save cart'});
+            }
+        }
+
         try{
             const { productId, quantity, action} = req.body;
             const userId = req.session.userId;
@@ -62,15 +72,17 @@ router.put('/', async (req, res) => {
                         existingItem.quantity += quantity;
                         break;
                     
-                    case (action === 'decrease'):
-                        existingItem.quantity -= quantity;
-                        break;
-                    
                     case (action === 'decrease' && quantity === 0):
                         const currentItemIndex = cart.items.findIndex((elem) => elem.product.toString() === productId);
                         cart.items.splice(currentItemIndex, 1);
                         break;
+
+                    case (action === 'decrease'):
+                        existingItem.quantity -= quantity;
+                        break;
                 }
+
+            saveCart();
 
             } else {
                 return res.status(404).json({ error: 'Item not found' });
@@ -80,18 +92,7 @@ router.put('/', async (req, res) => {
         }
     }
 
-    async function saveCart() {
-        try {
-            await cart.save();
-            res.status(200).json(cart);
-        } catch(error) {
-            console.error('Product was not saved with error:', error);
-            res.status(500).json({ error: 'Failed to save cart'});
-        }
-    }
-
     modifyCart();
-    saveCart();
 });
 
 module.exports = router;
