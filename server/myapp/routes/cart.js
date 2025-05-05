@@ -35,6 +35,7 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     const userId = req.session.userId;
+    let cart = await Cart.findOne({ user: userId });
 });
 
 module.exports = router;
