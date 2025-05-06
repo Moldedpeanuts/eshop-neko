@@ -112,7 +112,7 @@ router.delete('/', async (req, res) => {
                 return res.status(404).json({ error: 'Cart not found' });
             }
 
-            cart.deleteOne({ user: { userId }}).then(() => {
+            await cart.deleteOne({ user: { userId }}).then(() => {
                 console.log('User deleted cart');
                 res.status(200).json({ message: 'Cart deleted' });
             });
