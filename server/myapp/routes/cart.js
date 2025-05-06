@@ -119,6 +119,7 @@ router.delete('/', async (req, res) => {
 
         } catch {
             console.error('Something went wrong when deleting user cart', error);
+            res.status(500).json({ error: 'Something went wrong during cart deletion' });
         }
     }
 });
