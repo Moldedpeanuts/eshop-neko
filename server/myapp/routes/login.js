@@ -5,8 +5,9 @@ const { comparePassword } = require('../utils/password');
 
 router.post('/', async(req, res) => {
     const { email, password } = req.body;
+    const user = await User.findOne({ email });
+
     try {
-        const user = await User.findOne({ email });
         if(!user){
             return res.status(401).json({ error: 'Invalid email or password'});
         }
