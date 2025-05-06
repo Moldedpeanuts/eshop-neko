@@ -122,6 +122,8 @@ router.delete('/', async (req, res) => {
             res.status(500).json({ error: 'Something went wrong during cart deletion' });
         }
     }
+
+    deleteCart();
 });
 
 module.exports = router;
