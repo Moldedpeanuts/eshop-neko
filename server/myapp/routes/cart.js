@@ -102,7 +102,13 @@ router.put('/', async (req, res) => {
 });
 
 router.delete('/', async (req, res) => {
+    async function deleteCart() {
+        try{
+            const userId = req.session.userId;
+        } catch {
 
+        }
+    }
 });
 
 module.exports = router;
