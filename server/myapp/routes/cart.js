@@ -103,10 +103,10 @@ router.put('/', async (req, res) => {
 
 router.delete('/', async (req, res) => {
     async function deleteCart() {
+        const userId = req.session.userId;
+        const cart = await Cart.findOne({ userId });
+    
         try{
-            const userId = req.session.userId;
-            const cart = await Cart.findOne({ userId });
-
             if(!cart) {
                 return res.status(404).json({ error: 'Cart not found' });
             }
