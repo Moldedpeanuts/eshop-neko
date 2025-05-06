@@ -105,6 +105,7 @@ router.delete('/', async (req, res) => {
     async function deleteCart() {
         try{
             const userId = req.session.userId;
+            const cart = await Cart.findOne({ userId });
         } catch {
 
         }
