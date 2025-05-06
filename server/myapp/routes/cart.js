@@ -101,4 +101,8 @@ router.put('/', async (req, res) => {
     modifyCart();
 });
 
+router.delete('/', async (req, res) => {
+
+});
+
 module.exports = router;
