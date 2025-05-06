@@ -112,10 +112,9 @@ router.delete('/', async (req, res) => {
                 return res.status(404).json({ error: 'Cart not found' });
             }
 
-            await cart.deleteOne({ user: { userId }}).then(() => {
-                console.log('User deleted cart');
-                res.status(200).json({ message: 'Cart deleted' });
-            });
+            await cart.deleteOne({ user: { userId }});
+            console.log('User deleted cart');
+            res.status(200).json({ message: 'Cart deleted' });
 
         } catch {
             console.error('Something went wrong when deleting user cart', error);
