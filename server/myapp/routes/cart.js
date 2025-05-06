@@ -115,8 +115,8 @@ router.delete('/', async (req, res) => {
             console.log('User deleted cart');
             res.status(200).json({ message: 'Cart deleted' });
 
-        } catch {
-            console.error('Something went wrong when deleting user cart', error);
+        } catch(err) {
+            console.error('Something went wrong when deleting user cart', err);
             res.status(500).json({ error: 'Something went wrong during cart deletion' });
         }
     }
