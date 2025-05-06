@@ -106,6 +106,10 @@ router.delete('/', async (req, res) => {
         try{
             const userId = req.session.userId;
             const cart = await Cart.findOne({ userId });
+
+            if(!cart) {
+                res.status(404).json({ error: 'Cart not found' });
+            }
         } catch {
 
         }
