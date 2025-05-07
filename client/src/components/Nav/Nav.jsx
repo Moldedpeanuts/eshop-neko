@@ -13,6 +13,8 @@ export default function Nav() {
 
                  {/* --- Mobile View --- */}
 
+                 {/* --- Desktop View --- */}
+
                 <div className="flex flex-col md:flex-row sm:flex-row items-center justify-between px-4 py-4 gap-4">
                     {/* Logo Section */}
                     <div className="flex items-center gap-2 sm:w-3/4 md:w-2/3 lg:w-1/3">
