@@ -10,7 +10,7 @@ export default function Nav() {
     return(
         <>
              <div className="w-full">
-                <div className="flex">
+                <div className="flex px-4 py-4">
                     {/* Logo Section */}
                     <div>
                         <FaCat className="text-2xl cursor-pointer"></FaCat><h1 className="text-5xl font-bold cursor-pointer">NEKO</h1>
