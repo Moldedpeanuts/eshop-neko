@@ -10,17 +10,19 @@ export default function Nav() {
     return(
         <>
              <div className="w-full">
-                <div className="flex px-4 py-4">
+                <div className="flex px-4 py-4 gap-4">
                     {/* Logo Section */}
                     <div>
                         <FaCat className="text-2xl cursor-pointer"></FaCat><h1 className="text-5xl font-bold cursor-pointer">NEKO</h1>
                     </div>
                     {/* Search Bar Section */}
+                    <div>
                         <input
                             type="text"
                             placeholder="Search..."
                             className="w-full w-64 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-secondary border border-gray-300 text-black"
                         />
+                    </div>
 
                     {/* Profile, Favorites and Cart section */}
                     <div>
