@@ -12,7 +12,7 @@ export default function Nav() {
              <div className="w-full">
                 <div className="flex justify-around px-4 py-4 gap-4">
                     {/* Logo Section */}
-                    <div>
+                    <div className="flex justify-center gap-2">
                         <FaCat className="text-2xl cursor-pointer"></FaCat><h1 className="text-5xl font-bold cursor-pointer">NEKO</h1>
                     </div>
                     {/* Search Bar Section */}
