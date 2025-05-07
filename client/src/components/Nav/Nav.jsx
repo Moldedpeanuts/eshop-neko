@@ -25,7 +25,7 @@ export default function Nav() {
                     </div>
 
                     {/* Profile, Favorites and Cart section */}
-                    <div>
+                    <div className="flex justify-center gap-4">
                         <a href="#"><FaRegUser className="text-2xl"></FaRegUser></a>
                         <a href="#"><FaRegHeart className="text-2xl"></FaRegHeart></a>
                         <a href="#"><BsCart3 className="text-2xl"></BsCart3></a>
