@@ -13,9 +13,14 @@ router.post('/', async (req, res) => {
 
     async function createUser() {
         try {
-
+            const newUser = new User({
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password
+            });
         } catch {
-            
+
         }
     }
 });
