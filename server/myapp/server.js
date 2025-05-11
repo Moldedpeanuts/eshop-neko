@@ -14,8 +14,10 @@ app.use(session);
 const productRoutes = require('./routes/products'); // import router before starting server
 app.use('/products', productRoutes);
 
-const authRoutes = require('./routes/login');
-app.use('/login', authRoutes);
+const login = require('./routes/login');
+app.use('/login', login);
+
+
 
 app.get('/', (req, res) => {
     res.send('Homepage');
