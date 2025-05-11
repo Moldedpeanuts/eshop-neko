@@ -18,7 +18,7 @@ const login = require('./routes/login');
 app.use('/login', login);
 
 const register = require('./routes/registration');
-
+app.use('./register', register);
 
 app.get('/', (req, res) => {
     res.send('Homepage');
