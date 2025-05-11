@@ -21,6 +21,7 @@ router.post('/', async (req, res) => {
             });
         } catch(err) {
             console.error('Something went wrong with user registration', err);
+            res.status(500).json({ error: 'Something went wrong with user registration'});
         }
     }
 });
