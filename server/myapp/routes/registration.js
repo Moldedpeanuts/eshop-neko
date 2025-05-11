@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         return res.status(409).json({ error: 'Account already exists'});
     }
 
-    async function createUser() {
+    async function createAndSaveUser() {
         try {
             const newUser = new User({
                 firstName: firstName,
@@ -19,11 +19,13 @@ router.post('/', async (req, res) => {
                 email: email,
                 password: password
             });
+
+            await newUser.save();
         } catch(err) {
             console.error('Something went wrong with user registration', err);
             res.status(500).json({ error: 'Something went wrong with user registration'});
         }
     }
 
-    createUser();
+    createAndSaveUser();
 });
