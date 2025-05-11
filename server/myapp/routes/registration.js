@@ -8,6 +8,6 @@ router.post('/', async (req, res) => {
     const userExists = await User.findOne({ email });
 
     if(userExists) {
-        res.status(409).json({ error: 'Account already exists'});
+        return res.status(409).json({ error: 'Account already exists'});
     }
 });
