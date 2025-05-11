@@ -19,8 +19,8 @@ router.post('/', async (req, res) => {
                 email: email,
                 password: password
             });
-        } catch {
-
+        } catch(err) {
+            console.error('Something went wrong with user registration', err);
         }
     }
 });
