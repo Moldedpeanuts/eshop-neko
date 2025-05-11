@@ -17,6 +17,7 @@ app.use('/products', productRoutes);
 const login = require('./routes/login');
 app.use('/login', login);
 
+const register = require('./routes/registration');
 
 
 app.get('/', (req, res) => {
