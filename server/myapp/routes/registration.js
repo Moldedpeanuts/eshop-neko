@@ -10,4 +10,12 @@ router.post('/', async (req, res) => {
     if(userExists) {
         return res.status(409).json({ error: 'Account already exists'});
     }
+
+    async function createUser() {
+        try {
+
+        } catch {
+            
+        }
+    }
 });
