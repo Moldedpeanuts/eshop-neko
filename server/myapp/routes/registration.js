@@ -28,3 +28,5 @@ router.post('/', async (req, res) => {
 
     createAndSaveUser();
 });
+
+module.exports = router;
