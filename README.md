@@ -1,5 +1,4 @@
 # Neko eshop
-**Status**: *In Progress* 🛠️
 
 eShop-Neko is an online shopping platform dedicated to showcasing high-quality products and a range of product categories. This project is currently being developed using **React** for the frontend and **Node.js** for the backend.
 
