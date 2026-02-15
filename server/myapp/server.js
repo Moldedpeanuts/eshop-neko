@@ -35,6 +35,11 @@ app.listen(port, () => {
 
 
 async function connectToMongo() {
+    if(!process.env.MONGO_URI) {
+        console.log("MONGO_URI environment variable isn't set.Please set it in .env file");
+        return;
+    }
+    
     try {
         await mongoose.connect(process.env.MONGO_URI);
         console.log('MongoDB successful connection!');
