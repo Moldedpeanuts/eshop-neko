@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
     const userExists = await User.findOne({ email });
 
     if(userExists) {
-        return res.status(409).json({ error: 'Account already exists'});
+        return res.status(409).json({ error: 'Account already exists. Please log in.'});
     }
 
     async function createAndSaveUser() {
