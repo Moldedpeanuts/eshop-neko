@@ -32,9 +32,9 @@ cd eshop-neko
 npm install
 ```
 
-4. Start the development server:
+4. Frontend client:
 ```bash
-npm start
+npm run dev
 ```
 
 
